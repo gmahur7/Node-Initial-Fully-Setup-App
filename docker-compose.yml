@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: backend_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: app_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend_api
+    restart: unless-stopped
+    depends_on:
+      - db
+    env_file:
+      - .env
+    ports:
+      - "4000:4000"
+    command: sh -c "npm run prisma:generate && npm run start"
+
+volumes:
+  postgres_data:

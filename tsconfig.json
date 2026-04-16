@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "rootDir": ".",
+    "strict": true,
+    "ignoreDeprecations": "6.0",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@controllers/*": [
+        "src/controllers/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
+      "@repositories/*": [
+        "src/repositories/*"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
+      "@middlewares/*": [
+        "src/middlewares/*"
+      ],
+      "@validators/*": [
+        "src/validators/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@constants/*": [
+        "src/constants/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "prisma/**/*.ts",
+    "prisma.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
