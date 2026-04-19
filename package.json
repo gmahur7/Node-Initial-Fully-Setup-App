@@ -1,7 +1,7 @@
 {
-  "name": "RAG",
+  "name": "Node Initial Setup",
   "version": "1.0.0",
-  "description": "RAG backend with Express, TypeScript, PostgreSQL, and Prisma",
+  "description": "Node Initial Setup with Express, TypeScript, PostgreSQL, and Prisma",
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "main": "dist/src/server.js",
